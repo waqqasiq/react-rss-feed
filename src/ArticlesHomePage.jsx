@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ArticleList from './components/ArticleList';
 import Navbar from './components/Navbar';
 
-const App = () => {
+const ArticlesHomePage = () => {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -75,4 +75,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ArticlesHomePage;

@@ -1,14 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import ArticleList from './components/ArticleList';
-import ArticleDetails from './components/ArticleDetails';
-import App from './App';
+import ArticleDetailsPage from './ArticleDetailsPage';
+import ArticlesHomePage from './ArticlesHomePage';
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/article/:id" element={<ArticleDetails />} />
+        <Route path="/" element={<ArticlesHomePage />} />
+        <Route path="/article/:id" element={<ArticleDetailsPage />} />
       </Routes>
     </Router>
   );
