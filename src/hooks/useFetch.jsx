@@ -20,7 +20,10 @@ const useFetch = (url, page = 1, limit = 10) => {
             }
         };
 
-        fetchData();
+        setTimeout(() => {
+            fetchData();
+        }, 500)
+
     }, [url, page, limit]);
 
     return { data, loading, error };

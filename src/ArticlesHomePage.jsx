@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { CircularProgress } from '@mui/material';
+import Box from '@mui/material/Box';
+
 import ArticleList from './components/ArticleList';
 import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
@@ -33,7 +36,10 @@ const ArticlesHomePage = () => {
       {/* <h1 style={{ textAlign: 'center' }}>FeedSync</h1> */}
 
       {loading ? (
-        <p style={{ textAlign: 'center' }}>Loading...</p>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt:'3rem' }}>
+          <CircularProgress color='inherit'/>
+        </Box>
+        // <p style={{ textAlign: 'center' }}>Loading...</p>
       ) : (
         <div>
           <ArticleList articles={articles} />
