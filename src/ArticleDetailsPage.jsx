@@ -19,7 +19,6 @@ const ArticleDetailsPage = () => {
                 </Box>
             </div>
         )
-
     }
 
     if (!article) {

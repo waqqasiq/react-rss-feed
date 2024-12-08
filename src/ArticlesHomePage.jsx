@@ -33,13 +33,10 @@ const ArticlesHomePage = () => {
   return (
     <div style={{ width: '100vw', minHeight: '100vh' }}>
       <Navbar />
-      {/* <h1 style={{ textAlign: 'center' }}>FeedSync</h1> */}
-
       {loading ? (
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: '15%' }}>
           <CircularProgress color='inherit' />
         </Box>
-        // <p style={{ textAlign: 'center' }}>Loading...</p>
       ) : (
         <div>
           <ArticleList articles={articles} />
