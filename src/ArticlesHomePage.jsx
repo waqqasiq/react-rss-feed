@@ -1,24 +1,19 @@
 import { useState, useEffect } from 'react';
-// import axios from 'axios';
 import ArticleList from './components/ArticleList';
 import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
 
 const ArticlesHomePage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-    const { data, loading, } = useFetch(
-        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/article/get-articles`, 
-        currentPage, 
-        10 // Adjust limit as needed
-    );
+  const { data, loading, } = useFetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/article/get-articles`, currentPage, 10);
 
-    const { articles, currentPage: fetchedPage, totalPages } = data || {};
+  const { articles, currentPage: fetchedPage, totalPages } = data || {};
 
-    useEffect(() => {
-        if (data) {
-            setCurrentPage(fetchedPage);
-        }
-    }, [data, fetchedPage]);
+  useEffect(() => {
+    if (data) {
+      setCurrentPage(fetchedPage);
+    }
+  }, [data, fetchedPage]);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -33,7 +28,7 @@ const ArticlesHomePage = () => {
   };
 
   return (
-    <div style={{ width: '100vw', minHeight:'100vh' }}>
+    <div style={{ width: '100vw', minHeight: '100vh' }}>
       <Navbar />
       {/* <h1 style={{ textAlign: 'center' }}>FeedSync</h1> */}
 
@@ -42,7 +37,7 @@ const ArticlesHomePage = () => {
       ) : (
         <div>
           <ArticleList articles={articles} />
-          <div style={{ textAlign: 'center', marginBottom:'20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
             <button
               onClick={handlePrevPage}
               disabled={currentPage === 1}

@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import ArticleDetailCard from './components/ArticleDetailCard';  // Import the new component
 import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
