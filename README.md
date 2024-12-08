@@ -53,14 +53,14 @@ src/
 │   ├── ArticleCard.jsx          # Reusable component for rendering individual article cards.
 │   ├── ArticleList.jsx          # Component for displaying a list of articles.
 │   ├── ArticleDetailCard.jsx    # Detailed view of a single article.
-│   └── Navbar.jsx                  # Navigation bar component.
+│   └── Navbar.jsx               # Navigation bar component.
 ├── hooks/
 │   └── useFetch.jsx             # Custom hook for fetching data.
 ├── pages/
 │   ├── ArticlesHomePage.jsx     # Main page displaying articles with filters and pagination.
 │   └── ArticleDetailsPage.jsx   # Page displaying detailed view of an article.
-├── main.jsx                   # Main entry point for the React application.
-└── Router.jsx                     # Application entry point.
+├── main.jsx                     # Main entry point for the React application.
+└── Router.jsx                   # Application entry point.
 ```
 
 ### Backend Integration  
