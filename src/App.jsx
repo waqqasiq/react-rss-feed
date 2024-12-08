@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ArticleList from './components/ArticleList';
+import Navbar from './components/Navbar';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -40,14 +41,16 @@ const App = () => {
   };
 
   return (
-    <div style={{ width: '100vw' }}>
-      <h1 style={{ textAlign: 'center' }}>FeedSync</h1>
+    <div style={{ width: '100vw', minHeight:'100vh' }}>
+      <Navbar />
+      {/* <h1 style={{ textAlign: 'center' }}>FeedSync</h1> */}
+
       {loading ? (
         <p style={{ textAlign: 'center' }}>Loading...</p>
       ) : (
         <div>
           <ArticleList articles={articles} />
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <div style={{ textAlign: 'center', marginBottom:'20px' }}>
             <button
               onClick={handlePrevPage}
               disabled={currentPage === 1}

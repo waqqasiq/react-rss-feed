@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Card, CardContent,CardMedia, Typography, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
+import ArticleCard from './ArticleCard';
 
 const ArticleList = ({ articles }) => {
     const [filterText, setFilterText] = useState('');
@@ -35,9 +36,9 @@ const ArticleList = ({ articles }) => {
     });
 
     return (
-        <div style={{ padding: '20px'}}>
+        <div style={{ padding: '20px' }}>
 
-            <div style={{ marginBottom: '20px', display: 'flex', gap: '10px', width:'100%', justifyContent:'center' }}>
+            <div style={{ marginBottom: '20px', display: 'flex', gap: '10px', width: '100%', justifyContent: 'center' }}>
                 <TextField
                     label="Filter by Title or Description"
                     variant="outlined"
@@ -68,34 +69,13 @@ const ArticleList = ({ articles }) => {
                 style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    gap: '20px',
+                    gap: '30px',
                     justifyContent: 'center',
                     padding: '20px',
                 }}
             >
                 {filteredArticles.map((article) => (
-                    <Card key={article.id} style={{ width: '300px', height: '350px', position: 'relative' }}>
-                        {/* Optionally add a media thumbnail if needed */}
-                        {article.thumbnail_url && (
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image={article.thumbnail_url}
-                                alt={article.title}
-                            />
-                        )}
-                        <CardContent>
-                            <Typography variant="h6" component="div">
-                                {article.title}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {article.description.substring(0, 100)}...
-                            </Typography>
-                            <Typography variant="caption" display="block" color="text.secondary">
-                                {new Date(article.pubDate).toLocaleDateString()}
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                    <ArticleCard key={article.id} article={article}/>
                 ))}
             </div>
         </div>
