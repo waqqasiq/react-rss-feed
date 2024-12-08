@@ -59,8 +59,8 @@ src/
 ├── pages/
 │   ├── ArticlesHomePage.jsx     # Main page displaying articles with filters and pagination.
 │   └── ArticleDetailsPage.jsx   # Page displaying detailed view of an article.
-├── Router.jsx                   # Main entry point for the React application.
-└── main.jsx                     # Application entry point.
+├── main.jsx                   # Main entry point for the React application.
+└── Router.jsx                     # Application entry point.
 ```
 
 ### Backend Integration  
