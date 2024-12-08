@@ -14,7 +14,7 @@ const ArticleDetailsPage = () => {
         return (
             <div style={{ width: '100vw', minHeight: '100vh' }}>
                 <Navbar />
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: '3rem' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: '15%' }}>
                     <CircularProgress color='inherit' />
                 </Box>
             </div>
