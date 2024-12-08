@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { CircularProgress } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import ArticleList from './components/ArticleList';
-import Navbar from './components/Navbar';
-import useFetch from './hooks/useFetch';
+import ArticleList from '../components/ArticleList';
+import Navbar from '../components/Navbar';
+import useFetch from '../hooks/useFetch';
 
 const ArticlesHomePage = () => {
   const [currentPage, setCurrentPage] = useState(1);

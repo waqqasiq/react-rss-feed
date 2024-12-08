@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import ArticleDetailCard from './components/ArticleDetailCard';  // Import the new component
-import Navbar from './components/Navbar';
-import useFetch from './hooks/useFetch';
+import ArticleDetailCard from '../components/ArticleDetailCard';  // Import the new component
+import Navbar from '../components/Navbar';
+import useFetch from '../hooks/useFetch';
 
 const ArticleDetailsPage = () => {
     const { id: articleId } = useParams(); // Get the article ID from the URL
